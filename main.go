@@ -67,6 +67,7 @@ func (b *Bot) Handshake() (*Bot, error) {
 
 	// Check for Slack error
 	if !response.Ok {
+		panic(err)
 		return nil, errors.New(response.Error)
 	}
 
